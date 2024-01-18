@@ -1,0 +1,23 @@
+package main
+
+// int형 함수를 return하는 함수
+func nextValue() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+
+func main() {
+	next := nextValue()
+
+	println(next())
+	println(next())
+	println(next())
+
+	anotherNext := nextValue()
+	println(anotherNext())
+	println(anotherNext())
+	println(anotherNext())
+}
