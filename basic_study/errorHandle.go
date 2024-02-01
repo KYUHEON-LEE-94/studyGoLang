@@ -5,8 +5,9 @@ import (
 	"os"
 )
 
-func otherFunc() {
-	return 2
+func otherFunc() (test string) {
+	test = "say hello"
+	return test
 }
 
 func main() {
